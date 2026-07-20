@@ -1289,16 +1289,17 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-3 md:inset-4 border-[0.5px] border-[#d4af37]/20 pointer-events-none" />
 
                     <div className="w-full flex flex-col items-center mt-6 relative z-10 px-2 md:px-6">
-                      <p className="font-montserrat text-[10px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-medium mb-2 text-center leading-relaxed">
-                        RSVP - Dammika 077 909 0515 | Sachini 076 850 4398
-                      </p>
-
-                      <div className="flex items-center justify-center gap-4 w-full mb-8">
+                      <div className="flex items-center justify-center gap-4 w-full mb-4">
                         <div className="h-[0.5px] w-full bg-[#d4af37]/40" />
-                        <h3 className="font-alex text-5xl md:text-7xl text-gold-gradient whitespace-nowrap leading-[0.8] drop-shadow-sm px-2">
+                        <h3 className="font-alex text-5xl md:text-7xl text-gold-gradient whitespace-nowrap leading-none drop-shadow-sm px-2 py-2">
                           R.S.V.P
                         </h3>
                         <div className="h-[0.5px] w-full bg-[#d4af37]/40" />
+                      </div>
+
+                      <div className="font-montserrat text-[10px] md:text-[11px] tracking-[0.2em] text-slate-500 uppercase font-medium text-center leading-relaxed mb-8 space-y-1">
+                        <p>Shaleeka 077 690 1331</p>
+                        <p>Sachini 077 162 3844</p>
                       </div>
 
                       <form className="w-full space-y-8 text-left max-w-sm mt-4" onSubmit={handleRsvpSubmit}>

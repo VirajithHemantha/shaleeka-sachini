@@ -1224,7 +1224,7 @@ export default function Day2() {
 
                       <div className="flex items-center justify-center gap-4 w-full mb-8">
                         <div className="h-[0.5px] w-full bg-[#d4af37]/40" />
-                        <h3 className="font-alex text-5xl md:text-7xl text-gold-gradient whitespace-nowrap leading-[0.8] drop-shadow-sm px-2">
+                        <h3 className="font-alex text-5xl md:text-7xl text-gold-gradient whitespace-nowrap leading-none drop-shadow-sm px-2 py-2">
                           R.S.V.P
                         </h3>
                         <div className="h-[0.5px] w-full bg-[#d4af37]/40" />

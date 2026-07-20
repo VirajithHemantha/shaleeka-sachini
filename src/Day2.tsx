@@ -1457,16 +1457,9 @@ export default function Day2() {
                       <span className="hidden md:inline text-[#d4af37]/30">|</span>
                       <span>All Rights Reserved</span>
                     </p>
-                    <a
-                      href="https://wa.me/94707819074"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[9px] tracking-[0.3em] text-[#d4af37]/60 hover:text-[#d4af37] transition-all uppercase font-medium flex items-center gap-2"
-                    >
-                      <span>Designed by invitemint</span>
-                      <span className="w-1 h-1 rounded-full bg-[#d4af37]/40" />
-                      <span>Contact us</span>
-                    </a>
+                    <p className="text-[#D4AF37]/80 text-[10px] md:text-xs mt-2 font-montserrat tracking-wider text-center">
+                      Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-white hover:text-[#D4AF37] underline transition-colors" href="https://wa.me/94707819074">invitemint</a>
+                    </p>
                   </div>
                 </div>
               </footer>

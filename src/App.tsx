@@ -787,7 +787,7 @@ export default function WeddingInvitation() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 1.5 }}
-                className="w-full max-w-[90vw] md:max-w-[500px] object-contain drop-shadow-xl -translate-y-32 md:translate-y-0"
+                className="w-full max-w-[75vw] md:max-w-[500px] object-contain drop-shadow-xl -translate-y-12 md:translate-y-0"
               />
             </div>
           </motion.div>
@@ -880,13 +880,13 @@ export default function WeddingInvitation() {
                   className="mt-8 md:mt-16 w-full flex items-center justify-center gap-4 md:gap-8 max-w-lg"
                 >
                   <div className="flex flex-col flex-1 items-center justify-center border-y-[0.5px] border-[#d4af37] py-2">
-                    <span className="font-cinzel text-[#8C6246] tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-sm font-medium">September</span>
+                    <span className="font-cinzel text-[#8C6246] tracking-[0.2em] md:tracking-[0.3em] uppercase text-sm md:text-lg font-bold">September</span>
                   </div>
                   <div className="h-16 md:h-20 w-[0.5px] bg-[#d4af37]"></div>
                   <span className="font-serif text-[4rem] md:text-[5.5rem] leading-none text-[#5F3924]">21</span>
                   <div className="h-16 md:h-20 w-[0.5px] bg-[#d4af37]"></div>
                   <div className="flex flex-col flex-1 items-center justify-center border-y-[0.5px] border-[#d4af37] py-2">
-                    <span className="font-cinzel text-[#8C6246] tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-sm font-medium">2026</span>
+                    <span className="font-cinzel text-[#8C6246] tracking-[0.2em] md:tracking-[0.3em] uppercase text-sm md:text-lg font-bold">2026</span>
                   </div>
                 </motion.div>
 
@@ -1528,16 +1528,9 @@ export default function WeddingInvitation() {
                       <span className="hidden md:inline text-[#d4af37]/30">|</span>
                       <span>All Rights Reserved</span>
                     </p>
-                    <a
-                      href="https://wa.me/94707819074"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[9px] tracking-[0.3em] text-[#d4af37]/60 hover:text-[#d4af37] transition-all uppercase font-medium flex items-center gap-2"
-                    >
-                      <span>Designed by invitemint</span>
-                      <span className="w-1 h-1 rounded-full bg-[#d4af37]/40" />
-                      <span>Contact us</span>
-                    </a>
+                    <p className="text-[#D4AF37]/80 text-[10px] md:text-xs mt-2 font-montserrat tracking-wider text-center">
+                      Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-white hover:text-[#D4AF37] underline transition-colors" href="https://wa.me/94707819074">invitemint</a>
+                    </p>
                   </div>
                 </div>
               </footer>

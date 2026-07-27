@@ -10,7 +10,7 @@ import { useInView } from 'react-intersection-observer';
  * Accents: Green/Brown
  */
 
-const backgroundMusic = "/Until_I_Found_You-646184-mobiles24.mp3";
+const backgroundMusic = "/ssstik.io_1785184484353.mp3";
 const googleScriptUrl = "https://script.google.com/macros/s/AKfycbzeguee7EGTyHfIwmmVJfjHulTx03lc3wLeqJtq0Rw3OGiQ9HUPBzJ76i0yM91bX3mQ/exec";
 
 /** iOS / Android block unmuted autoplay; iPadOS may report as MacIntel. */
@@ -503,7 +503,7 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 }
 
 export default function WeddingInvitation() {
-  const [introState, setIntroState] = useState<'button' | 'video' | 'opened'>('button');
+  const [introState, setIntroState] = useState<'button' | 'video1' | 'video2' | 'opened'>('button');
   const [isAccommodationOpen, setIsAccommodationOpen] = useState(false);
 
   const [rsvpForm, setRsvpForm] = useState({
@@ -742,9 +742,14 @@ export default function WeddingInvitation() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center"
             >
+              <img 
+                src="/3__1_-removebg-preview.png" 
+                alt="Logo" 
+                className="w-48 md:w-64 mx-auto mb-4 object-contain" 
+              />
               <h2 className="font-alex text-4xl md:text-6xl text-[#5F3924] mb-6">Shaleeka & Sachini</h2>
               <button
-                onClick={() => setIntroState('video')}
+                onClick={() => setIntroState('video1')}
                 className="px-8 py-3 bg-[#B7410E] text-white rounded-full font-montserrat text-xs uppercase tracking-[0.2em] hover:bg-[#774C32] transition-colors shadow-lg cursor-pointer"
               >
                 View Invitation
@@ -753,7 +758,32 @@ export default function WeddingInvitation() {
           </motion.div>
         )}
 
-        {introState === 'video' && (
+        {introState === 'video1' && (
+          <motion.div
+            key="video-intro-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 1 } }}
+            onClick={() => {
+              setIntroState('video2');
+            }}
+            className="fixed inset-0 z-[200] bg-black flex items-center justify-center overflow-hidden cursor-pointer"
+          >
+            <video
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => {
+                setIntroState('video2');
+              }}
+              className="absolute inset-0 w-full h-full object-cover opacity-70"
+            >
+              <source src="/intro-video.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+        )}
+
+        {introState === 'video2' && (
           <motion.div
             key="video-intro"
             initial={{ opacity: 0 }}

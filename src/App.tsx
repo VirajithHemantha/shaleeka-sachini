@@ -503,7 +503,7 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 }
 
 export default function WeddingInvitation() {
-  const [introState, setIntroState] = useState<'button' | 'video1' | 'video2' | 'opened'>('button');
+  const [introState, setIntroState] = useState<'button' | 'video1' | 'opened'>('button');
   const [isAccommodationOpen, setIsAccommodationOpen] = useState(false);
 
   const [rsvpForm, setRsvpForm] = useState({
@@ -765,31 +765,6 @@ export default function WeddingInvitation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 1 } }}
             onClick={() => {
-              setIntroState('video2');
-            }}
-            className="fixed inset-0 z-[200] bg-black flex items-center justify-center overflow-hidden cursor-pointer"
-          >
-            <video
-              autoPlay
-              muted
-              playsInline
-              onEnded={() => {
-                setIntroState('video2');
-              }}
-              className="absolute inset-0 w-full h-full object-cover opacity-70"
-            >
-              <source src="/intro-video.mp4" type="video/mp4" />
-            </video>
-          </motion.div>
-        )}
-
-        {introState === 'video2' && (
-          <motion.div
-            key="video-intro"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 1 } }}
-            onClick={() => {
               setIntroState('opened');
               void unlockAudioFromGesture();
             }}
@@ -805,29 +780,33 @@ export default function WeddingInvitation() {
               }}
               className="absolute inset-0 w-full h-full object-cover opacity-70"
             >
-              <source src="/Wedding_entrance_floral_arch_202605161834.mp4" type="video/mp4" />
+              <source src="/intro-video.mp4" type="video/mp4" />
             </video>
-
-            <div className="absolute inset-0 z-10 bg-black/30" />
-
-            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
-              <motion.img
-                src="/1__2_-removebg-preview.png"
-                alt="Welcome"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5, duration: 1.5 }}
-                className="w-full max-w-[75vw] md:max-w-[500px] object-contain drop-shadow-xl -translate-y-12 md:translate-y-0"
-              />
-            </div>
+            
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              className="absolute bottom-8 right-8 md:bottom-12 md:right-12 z-[210]"
+            >
+              <button className="px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white/80 hover:text-white rounded-full font-montserrat text-xs uppercase tracking-[0.2em] transition-all duration-300 border border-white/20 flex items-center gap-2 shadow-xl">
+                Skip
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                </svg>
+              </button>
+            </motion.div>
           </motion.div>
         )}
+
+
 
         {introState === 'opened' && (
           <motion.div
             key="website-stage"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, ease: 'easeInOut' }}
             className="website-shell relative z-20 w-full"
             onPointerDownCapture={() => {
               void unlockAudioFromGesture();

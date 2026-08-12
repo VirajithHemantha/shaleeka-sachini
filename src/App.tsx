@@ -159,7 +159,7 @@ function CountdownTimer() {
   return (
     <section
       ref={ref}
-      className="relative py-24 md:py-36 bg-gradient-to-br from-[#5F3924] via-[#B7410E] to-[#5F3924] flex flex-col items-center overflow-hidden z-20"
+      className="relative py-24 md:py-36 bg-[#f4e9dd] flex flex-col items-center overflow-hidden z-20"
     >
       {/* Texture & Glow Layer */}
       <div className="absolute inset-0 opacity-[0.15] bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] pointer-events-none z-0" />
@@ -200,16 +200,16 @@ function CountdownTimer() {
         >
           <motion.div
             whileHover={{ scale: 1.04 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/45 bg-black/30 px-5 py-2.5 shadow-[0_10px_30px_rgba(0,0,0,0.2)] backdrop-blur-md"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D8BCA3]/60 bg-[#D8BCA3]/20 px-5 py-2.5 shadow-[0_10px_30px_rgba(95,57,36,0.1)] backdrop-blur-md"
           >
             <Sparkles className="h-4 w-4 text-[#d4af37]" />
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#f7e7ce] sm:text-sm">
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#5F3924] sm:text-sm">
               The Big Day Approaches
             </span>
             <Sparkles className="h-4 w-4 text-[#d4af37]" />
           </motion.div>
 
-          <h2 className="font-alex text-6xl md:text-[8rem] leading-tight text-white drop-shadow-xl">
+          <h2 className="font-alex text-6xl md:text-[8rem] leading-tight text-[#5F3924] drop-shadow-sm">
             Counting Down to <span className="relative inline-block text-shimmer">
               Forever
               <motion.svg className="absolute -bottom-2 md:-bottom-4 left-0 w-full"
@@ -229,12 +229,12 @@ function CountdownTimer() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-10 max-w-2xl text-[#f7e7ce]/80 font-montserrat tracking-[0.3em] text-[10px] md:text-xs uppercase font-bold">
+          <p className="mx-auto mt-10 max-w-2xl text-[#5F3924]/80 font-montserrat tracking-[0.3em] text-[10px] md:text-xs uppercase font-bold">
             Every second brings us closer to our blessed wedding day. We cannot wait to celebrate this grace-filled moment with you.
           </p>
         </motion.div>
 
-        <div className="w-full rounded-[2.5rem] border border-[#d4af37]/30 bg-black/20 p-4 shadow-[0_30px_90px_rgba(0,0,0,0.5)] backdrop-blur-2xl sm:p-6 md:p-8">
+        <div className="w-full rounded-[2.5rem] border border-[#D8BCA3]/40 bg-[#D8BCA3]/10 p-4 shadow-[0_30px_90px_rgba(95,57,36,0.15)] backdrop-blur-2xl sm:p-6 md:p-8">
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
             {countdownItems.map((item, index) => (
               <motion.div
@@ -250,7 +250,7 @@ function CountdownTimer() {
                 whileHover={{ y: -10, scale: 1.05 }}
                 className="group relative"
               >
-                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_15px_35px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:border-[#d4af37]/40 group-hover:bg-white/10 md:p-8">
+                <div className="relative overflow-hidden rounded-[2rem] border border-[#D8BCA3]/40 bg-white/50 p-6 shadow-[0_15px_35px_rgba(95,57,36,0.1)] transition-all duration-300 group-hover:border-[#d4af37]/60 group-hover:bg-white/80 md:p-8">
                   <div className="absolute inset-0 opacity-[0.1]"
                     style={{
                       backgroundImage:
@@ -276,15 +276,15 @@ function CountdownTimer() {
                             damping: 24,
                             mass: 1
                           }}
-                          className="absolute font-serif text-5xl font-semibold text-[#f7e7ce] drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] sm:text-6xl md:text-7xl"
+                          className="absolute font-serif text-5xl font-semibold text-[#5F3924] drop-shadow-sm sm:text-6xl md:text-7xl"
                         >
                           {String(item.value).padStart(2, '0')}
                         </motion.span>
                       </AnimatePresence>
                     </div>
 
-                    <div className="mt-3 rounded-full border border-[#d4af37]/40 bg-black/40 px-3 py-1.5 shadow-sm md:mt-5">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#d4af37] md:text-xs">
+                    <div className="mt-3 rounded-full border border-[#D8BCA3]/60 bg-white/60 px-3 py-1.5 shadow-sm md:mt-5">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#5F3924] md:text-xs">
                         {item.label}
                       </p>
                     </div>
@@ -304,7 +304,7 @@ function CountdownTimer() {
           <div className="flex items-center gap-3 text-[#d4af37]">
             <Stars size={14} className="animate-pulse" />
             <Heart size={15} className="animate-bounce" fill="currentColor" />
-            <span className="font-serif italic text-lg text-[#f7e7ce]/80 sm:text-2xl">
+            <span className="font-serif italic text-lg text-[#5F3924] sm:text-2xl">
               Can't wait to see you there!
             </span>
             <Heart size={15} className="animate-bounce" fill="currentColor" style={{ animationDelay: '200ms' }} />
@@ -414,8 +414,8 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
       >
         <div className="p-6 border-b border-slate-100 flex items-center justify-between bg-[#fcfcf0]">
           <div>
-            <h2 className="font-cinzel text-xl md:text-2xl text-[#B7410E] font-bold">Accommodation Rates</h2>
-            <p className="text-[10px] uppercase tracking-widest text-[#B7410E] mt-1">Saminro Grand Palace, Makola</p>
+            <h2 className="font-cinzel text-xl md:text-2xl text-[#D8BCA3] font-bold">Accommodation Rates</h2>
+            <p className="text-[10px] uppercase tracking-widest text-[#D8BCA3] mt-1">Saminro Grand Palace, Makola</p>
           </div>
           <button onClick={onClose} className="p-2 hover:bg-slate-100 rounded-full transition-colors">
             <X size={24} className="text-slate-400" />
@@ -426,14 +426,14 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
           <div className="space-y-12">
             <div>
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-px flex-1 bg-[#B7410E]/30" />
-                <h3 className="font-playball text-3xl text-[#B7410E]">Honeymoon Room Rates</h3>
-                <div className="h-px flex-1 bg-[#B7410E]/30" />
+                <div className="h-px flex-1 bg-[#D8BCA3]/30" />
+                <h3 className="font-playball text-3xl text-[#D8BCA3]">Honeymoon Room Rates</h3>
+                <div className="h-px flex-1 bg-[#D8BCA3]/30" />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {honeymoonRates.map((plan) => (
                   <div key={plan.plan} className="bg-white p-6 rounded-xl border border-[#D8BCA3]/30 shadow-sm">
-                    <h4 className="font-cinzel text-sm font-bold text-[#B7410E] mb-4 border-b border-[#D8BCA3]/20 pb-2">{plan.plan}</h4>
+                    <h4 className="font-cinzel text-sm font-bold text-[#D8BCA3] mb-4 border-b border-[#D8BCA3]/20 pb-2">{plan.plan}</h4>
                     <div className="space-y-3">
                       {plan.rooms.map((room) => (
                         <div key={room.name} className="flex justify-between items-center gap-4">
@@ -441,7 +441,7 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
                             <p className="text-xs font-bold text-slate-700">{room.name}</p>
                             <p className="text-[10px] text-slate-400">{room.view}</p>
                           </div>
-                          <p className="text-xs font-bold text-[#B7410E] whitespace-nowrap">{room.rate}</p>
+                          <p className="text-xs font-bold text-[#D8BCA3] whitespace-nowrap">{room.rate}</p>
                         </div>
                       ))}
                     </div>
@@ -453,14 +453,14 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 
             <div>
               <div className="flex items-center gap-4 mb-8">
-                <div className="h-px flex-1 bg-[#B7410E]/30" />
-                <h3 className="font-playball text-3xl text-[#B7410E]">Double Room Rates</h3>
-                <div className="h-px flex-1 bg-[#B7410E]/30" />
+                <div className="h-px flex-1 bg-[#D8BCA3]/30" />
+                <h3 className="font-playball text-3xl text-[#D8BCA3]">Double Room Rates</h3>
+                <div className="h-px flex-1 bg-[#D8BCA3]/30" />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 {doubleRates.map((plan) => (
                   <div key={plan.plan} className="bg-white p-6 rounded-xl border border-[#D8BCA3]/30 shadow-sm">
-                    <h4 className="font-cinzel text-sm font-bold text-[#B7410E] mb-4 border-b border-[#D8BCA3]/20 pb-2">{plan.plan}</h4>
+                    <h4 className="font-cinzel text-sm font-bold text-[#D8BCA3] mb-4 border-b border-[#D8BCA3]/20 pb-2">{plan.plan}</h4>
                     <div className="space-y-3">
                       {plan.rooms.map((room) => (
                         <div key={room.name} className="flex justify-between items-center gap-4">
@@ -468,7 +468,7 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
                             <p className="text-xs font-bold text-slate-700">{room.name}</p>
                             <p className="text-[10px] text-slate-400">{room.view}</p>
                           </div>
-                          <p className="text-xs font-bold text-[#B7410E] whitespace-nowrap">{room.rate}</p>
+                          <p className="text-xs font-bold text-[#D8BCA3] whitespace-nowrap">{room.rate}</p>
                         </div>
                       ))}
                     </div>
@@ -480,15 +480,15 @@ function AccommodationModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
             <div className="grid md:grid-cols-3 gap-6 pt-6 border-t border-slate-100">
               <div className="text-center">
                 <p className="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Check In</p>
-                <p className="font-cinzel text-xl text-[#B7410E]">2:00 PM</p>
+                <p className="font-cinzel text-xl text-[#D8BCA3]">2:00 PM</p>
               </div>
               <div className="text-center">
                 <p className="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Check Out</p>
-                <p className="font-cinzel text-xl text-[#B7410E]">12:00 PM</p>
+                <p className="font-cinzel text-xl text-[#D8BCA3]">12:00 PM</p>
               </div>
               <div className="text-center">
                 <p className="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Availability</p>
-                <p className="font-cinzel text-sm text-[#B7410E] leading-tight">Max 16 Rooms Available</p>
+                <p className="font-cinzel text-sm text-[#D8BCA3] leading-tight">Max 16 Rooms Available</p>
               </div>
             </div>
           </div>
@@ -557,13 +557,13 @@ export default function WeddingInvitation() {
       await audio.play();
       
       const fadeInterval = setInterval(() => {
-        if (audio.volume < 0.95) {
-          audio.volume += 0.05;
+        if (audio.volume < 0.98) {
+          audio.volume += 0.02; // Fades in slowly over ~5 seconds
         } else {
           audio.volume = 1;
           clearInterval(fadeInterval);
         }
-      }, 200);
+      }, 100);
 
       hasStartedMusicRef.current = true;
       audioUnlockedRef.current = true;
@@ -609,13 +609,33 @@ export default function WeddingInvitation() {
     const wantOn = audio.muted || audio.paused;
     if (wantOn) {
       audio.muted = false;
+      if (audio.volume === 1) audio.volume = 0; // Reset volume for fade-in if it was paused
       void audio.play().then(
-        () => setMusicAudible(true),
+        () => {
+          setMusicAudible(true);
+          const fadeInterval = setInterval(() => {
+            if (audio.volume < 0.95) {
+              audio.volume += 0.05;
+            } else {
+              audio.volume = 1;
+              clearInterval(fadeInterval);
+            }
+          }, 100);
+        },
         () => { },
       );
     } else {
-      audio.muted = true;
-      setMusicAudible(false);
+      const fadeOutInterval = setInterval(() => {
+        if (audio.volume > 0.05) {
+          audio.volume -= 0.05;
+        } else {
+          audio.volume = 0;
+          audio.muted = true;
+          audio.pause(); // Pause after fading out
+          setMusicAudible(false);
+          clearInterval(fadeOutInterval);
+        }
+      }, 50);
     }
   }, [unlockAudioFromGesture]);
 
@@ -734,7 +754,7 @@ export default function WeddingInvitation() {
         {introState === 'button' && (
           <motion.div
             key="button-intro"
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, scale: 1.05, filter: "blur(10px)", transition: { duration: 0.8, ease: "easeInOut" } }}
             className="fixed inset-0 z-[300] bg-[#fdfaf5] flex flex-col items-center justify-center"
           >
             <motion.div
@@ -750,7 +770,7 @@ export default function WeddingInvitation() {
               <h2 className="font-alex text-4xl md:text-6xl text-[#5F3924] mb-6">Shaleeka & Sachini</h2>
               <button
                 onClick={() => setIntroState('video1')}
-                className="px-8 py-3 bg-[#B7410E] text-white rounded-full font-montserrat text-xs uppercase tracking-[0.2em] hover:bg-[#774C32] transition-colors shadow-lg cursor-pointer"
+                className="px-8 py-3 bg-[#D8BCA3] text-white rounded-full font-montserrat text-xs uppercase tracking-[0.2em] hover:bg-[#B69A82] transition-colors shadow-lg cursor-pointer"
               >
                 View Invitation
               </button>
@@ -761,8 +781,9 @@ export default function WeddingInvitation() {
         {introState === 'video1' && (
           <motion.div
             key="video-intro-1"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             exit={{ opacity: 0, transition: { duration: 1 } }}
             onClick={() => {
               setIntroState('opened');
@@ -986,7 +1007,7 @@ export default function WeddingInvitation() {
                   className="flex flex-col items-center gap-2"
                 >
                   <span className="text-[9px] uppercase tracking-[0.3em] text-[#A67B5B]">Scroll</span>
-                  <ChevronDown className="h-5 w-5 text-[#B7410E]" />
+                  <ChevronDown className="h-5 w-5 text-[#D8BCA3]" />
                 </motion.div>
               </motion.div>
             </section>
@@ -1113,7 +1134,7 @@ export default function WeddingInvitation() {
                     </div>
 
                     <div className="w-full flex justify-center overflow-hidden pt-4 md:pt-8">
-                      <h3 className="text-[4rem] sm:text-7xl md:text-[9rem] lg:text-[10rem] font-alex text-[#B7410E] leading-none drop-shadow-sm px-2 pb-2">
+                      <h3 className="text-[4rem] sm:text-7xl md:text-[9rem] lg:text-[10rem] font-alex text-[#D8BCA3] leading-none drop-shadow-sm px-2 pb-2">
                         Shaleeka
                       </h3>
                     </div>
@@ -1131,7 +1152,7 @@ export default function WeddingInvitation() {
                     </div>
 
                     <div className="w-full flex justify-center overflow-hidden">
-                      <h3 className="text-[4rem] sm:text-7xl md:text-[9rem] lg:text-[10rem] font-alex text-[#B7410E] leading-none drop-shadow-sm px-2 pt-2">
+                      <h3 className="text-[4rem] sm:text-7xl md:text-[9rem] lg:text-[10rem] font-alex text-[#D8BCA3] leading-none drop-shadow-sm px-2 pt-2">
                         Sachini
                       </h3>
                     </div>
@@ -1170,25 +1191,25 @@ export default function WeddingInvitation() {
                   >
                     <div className="space-y-4">
                       <div className="flex items-center gap-4 mb-2">
-                        <div className="w-12 h-[1px] bg-[#B7410E]" />
+                        <div className="w-12 h-[1px] bg-[#D8BCA3]" />
                         <span className="text-[#C9A227]">✦</span>
-                        <span className="text-[#B7410E] font-bold uppercase tracking-[0.4em] text-[10px]">
+                        <span className="text-[#D8BCA3] font-bold uppercase tracking-[0.4em] text-[10px]">
                           T H E | V E N U E
                         </span>
                       </div>
-                      <h3 className="font-cinzel text-[2.5rem] md:text-[4rem] text-[#B7410E] leading-tight tracking-widest font-bold uppercase">
+                      <h3 className="font-cinzel text-[2.5rem] md:text-[4rem] text-[#D8BCA3] leading-tight tracking-widest font-bold uppercase">
                         Hotel Green court <br className="md:hidden" /><span className="text-[1.2rem] md:text-[2rem]">(Grand Ballroom)</span>
                       </h3>
                     </div>
 
                     <div className="space-y-8 pl-6 border-l border-[#D8BCA3]/40">
                       <div className="flex items-start gap-4">
-                        <MapPin className="w-5 h-5 text-[#B7410E] mt-1 shrink-0" />
-                        <p className="text-lg md:text-xl text-[#B7410E] font-cinzel leading-relaxed tracking-wide uppercase">
+                        <MapPin className="w-5 h-5 text-[#D8BCA3] mt-1 shrink-0" />
+                        <p className="text-lg md:text-xl text-[#D8BCA3] font-cinzel leading-relaxed tracking-wide uppercase">
                           Hotel Green court <span className="text-sm md:text-base">(Grand Ballroom)</span>, Homagama.
                         </p>
                       </div>
-                      <p className="text-[#B7410E]/70 text-sm md:text-base tracking-widest uppercase font-light leading-loose">
+                      <p className="text-[#D8BCA3]/70 text-sm md:text-base tracking-widest uppercase font-light leading-loose">
                         (Poruwa Ceremony at 10.05 AM) MONDAY, 21 SEPTEMBER 2026. Reception from 10.40 AM to 4.00 PM.
                       </p>
                     </div>
@@ -1198,7 +1219,7 @@ export default function WeddingInvitation() {
                         onClick={() =>
                           window.open("https://www.google.com/maps/search/?api=1&query=Hotel+Green+court+Homagama", "_blank")
                         }
-                        className="group relative inline-flex items-center justify-center gap-4 px-10 py-5 bg-[#B7410E] text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden transition-all hover:bg-[#774C32]"
+                        className="group relative inline-flex items-center justify-center gap-4 px-10 py-5 bg-[#D8BCA3] text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] overflow-hidden transition-all hover:bg-[#B69A82]"
                       >
                         <MapPin className="w-4 h-4 transition-transform group-hover:-translate-y-1" />
                         Get Directions
@@ -1419,27 +1440,27 @@ export default function WeddingInvitation() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center"
                   >
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#B7410E]/10 mb-8 mt-4 shadow-sm border border-[#B7410E]/20">
-                      <Sparkles className="w-8 h-8 text-[#B7410E]" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#D8BCA3]/10 mb-8 mt-4 shadow-sm border border-[#D8BCA3]/20">
+                      <Sparkles className="w-8 h-8 text-[#D8BCA3]" />
                     </div>
 
-                    <h2 className="font-script text-[4.5rem] sm:text-[5rem] md:text-[7rem] text-[#B7410E] mb-6 drop-shadow-sm leading-none">
+                    <h2 className="font-script text-[4.5rem] sm:text-[5rem] md:text-[7rem] text-[#D8BCA3] mb-6 drop-shadow-sm leading-none">
                       Best Wishes
                     </h2>
                     <div className="h-px w-24 bg-[#D8BCA3] mb-8" />
 
-                    <p className="text-[#B7410E] text-sm md:text-lg leading-relaxed max-w-xl mx-auto mb-16 font-serif tracking-[0.1em] px-4 uppercase font-bold">
+                    <p className="text-[#D8BCA3] text-sm md:text-lg leading-relaxed max-w-xl mx-auto mb-16 font-serif tracking-[0.1em] px-4 uppercase font-bold">
                       Your presence at our wedding is the greatest gift of all. However, if you
                       wish to honor us with a message, we would be delighted to read it!
                     </p>
 
                     <div className="w-full max-w-2xl mx-auto bg-white p-8 md:p-14 shadow-[0_30px_70px_-15px_rgba(6,78,59,0.1)] border border-[#D8BCA3]/50 relative group card-marble">
                       <div className="absolute inset-0 gold-foil-edge opacity-20 pointer-events-none" />
-                      <div className="absolute inset-2 border-[0.5px] border-[#B7410E]/20 pointer-events-none transition-colors duration-700" />
+                      <div className="absolute inset-2 border-[0.5px] border-[#D8BCA3]/20 pointer-events-none transition-colors duration-700" />
 
                       <form className="space-y-12 text-left relative z-10" onSubmit={handleWishSubmit}>
                         <div className="space-y-4">
-                          <label className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#B7410E]/40">
+                          <label className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#D8BCA3]/40">
                             From
                           </label>
                           <input
@@ -1450,12 +1471,12 @@ export default function WeddingInvitation() {
                               setWishStatus("idle");
                               setWishForm((prev) => ({ ...prev, name: e.target.value }));
                             }}
-                            className="w-full bg-transparent border-b border-[#D8BCA3]/40 px-0 py-4 text-[#B7410E] placeholder:text-[#D8BCA3]/30 focus:outline-none focus:border-[#B7410E] transition-all font-cinzel text-lg tracking-widest"
+                            className="w-full bg-transparent border-b border-[#D8BCA3]/40 px-0 py-4 text-[#D8BCA3] placeholder:text-[#D8BCA3]/30 focus:outline-none focus:border-[#D8BCA3] transition-all font-cinzel text-lg tracking-widest"
                             required
                           />
                         </div>
                         <div className="space-y-4">
-                          <label className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#B7410E]/40">
+                          <label className="text-[10px] uppercase tracking-[0.4em] font-bold text-[#D8BCA3]/40">
                             Message
                           </label>
                           <textarea
@@ -1466,7 +1487,7 @@ export default function WeddingInvitation() {
                               setWishStatus("idle");
                               setWishForm((prev) => ({ ...prev, message: e.target.value }));
                             }}
-                            className="w-full bg-transparent border-b border-[#D8BCA3]/40 px-0 py-4 text-[#B7410E] placeholder:text-[#D8BCA3]/30 focus:outline-none focus:border-[#B7410E] transition-all font-cinzel text-lg tracking-widest resize-none"
+                            className="w-full bg-transparent border-b border-[#D8BCA3]/40 px-0 py-4 text-[#D8BCA3] placeholder:text-[#D8BCA3]/30 focus:outline-none focus:border-[#D8BCA3] transition-all font-cinzel text-lg tracking-widest resize-none"
                             required
                           />
                         </div>
@@ -1484,7 +1505,7 @@ export default function WeddingInvitation() {
                           <button
                             type="submit"
                             disabled={wishStatus === "sending"}
-                            className="bg-[#B7410E] text-white px-12 py-5 font-bold uppercase tracking-[0.4em] text-[10px] hover:bg-[#774C32] transition-all duration-300 shadow-md disabled:opacity-70"
+                            className="bg-[#D8BCA3] text-white px-12 py-5 font-bold uppercase tracking-[0.4em] text-[10px] hover:bg-[#B69A82] transition-all duration-300 shadow-md disabled:opacity-70"
                           >
                             {wishStatus === "sending" ? "Sending..." : "Send Wishes"}
                           </button>
@@ -1495,9 +1516,9 @@ export default function WeddingInvitation() {
                 </div>
               </section>
 
-              <footer className="relative py-24 md:py-32 bg-[#5F3924] w-full flex flex-col items-center overflow-hidden z-20">
-                {/* Subtle vignette over the deep green */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)] pointer-events-none z-0"></div>
+              <footer className="relative py-24 md:py-32 bg-[#f4e9dd] w-full flex flex-col items-center overflow-hidden z-20">
+                {/* Subtle vignette over the light background */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(216,188,163,0.3)_100%)] pointer-events-none z-0"></div>
 
                 {/* Elegant border details */}
                 <div className="absolute top-0 left-0 w-full h-[0.5px] bg-gradient-to-r from-transparent via-[#d4af37]/50 to-transparent"></div>
@@ -1517,29 +1538,29 @@ export default function WeddingInvitation() {
                       <div className="h-[0.5px] w-12 md:w-16 bg-[#d4af37]/40" />
                     </div>
 
-                    <p className="font-montserrat text-[9px] md:text-[11px] tracking-[0.5em] text-[#f7e7ce]/70 uppercase font-medium mb-4">
+                    <p className="font-montserrat text-[9px] md:text-[11px] tracking-[0.5em] text-[#5F3924]/80 uppercase font-medium mb-4">
                       With heartfelt gratitude
                     </p>
 
                     <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mt-4">
-                      <h2 className="font-alex text-5xl md:text-7xl text-gold-gradient py-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] leading-none">
+                      <h2 className="font-alex text-5xl md:text-7xl text-gold-gradient py-2 drop-shadow-[0_2px_8px_rgba(95,57,36,0.3)] leading-none">
                         Shaleeka
                       </h2>
-                      <span className="font-serif text-3xl md:text-5xl text-[#d4af37] italic opacity-80 drop-shadow-md pb-2">&</span>
-                      <h2 className="font-alex text-5xl md:text-7xl text-gold-gradient py-2 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] leading-none">
+                      <span className="font-serif text-3xl md:text-5xl text-[#d4af37] italic opacity-80 drop-shadow-sm pb-2">&</span>
+                      <h2 className="font-alex text-5xl md:text-7xl text-gold-gradient py-2 drop-shadow-[0_2px_8px_rgba(95,57,36,0.3)] leading-none">
                         Sachini
                       </h2>
                     </div>
                   </motion.div>
 
                   <div className="mt-20 pt-8 border-t-[0.5px] border-[#d4af37]/30 w-full max-w-xs md:max-w-md flex flex-col items-center gap-4">
-                    <p className="text-[8px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.6em] text-[#f7e7ce]/50 font-bold leading-relaxed flex flex-col md:flex-row items-center gap-2 md:gap-4">
+                    <p className="text-[8px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.6em] text-[#5F3924]/70 font-bold leading-relaxed flex flex-col md:flex-row items-center gap-2 md:gap-4">
                       <span>© 2026 Shaleeka & Sachini</span>
                       <span className="hidden md:inline text-[#d4af37]/30">|</span>
                       <span>All Rights Reserved</span>
                     </p>
                     <p className="text-[#D4AF37]/80 text-[10px] md:text-xs mt-2 font-montserrat tracking-wider text-center">
-                      Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-white hover:text-[#D4AF37] underline transition-colors" href="https://wa.me/94707819074">invitemint</a>
+                      Want a beautiful wedding website like this? Create yours with <a target="_blank" rel="noreferrer" className="text-[#5F3924] hover:text-[#D4AF37] underline transition-colors" href="https://wa.me/94707819074">invitemint</a>
                     </p>
                   </div>
                 </div>
@@ -1567,7 +1588,7 @@ export default function WeddingInvitation() {
         onClick={() => handleSoundToggle()}
         aria-pressed={musicAudible}
         aria-label={musicAudible ? "Mute background music" : "Unmute background music"}
-        className="fixed bottom-6 left-6 z-[120] flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#B7410E] bg-white/95 text-[#B7410E] shadow-[0_0_0_4px_rgba(197,160,89,0.2),0_10px_36px_-6px_rgba(135,147,122,0.45)] backdrop-blur-md touch-manipulation transition-[transform,box-shadow] hover:scale-[1.05] hover:shadow-[0_0_0_5px_rgba(197,160,89,0.28),0_14px_44px_-6px_rgba(135,147,122,0.5)] active:scale-[0.96] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7410E] focus-visible:ring-offset-2 focus-visible:ring-offset-[#fdfaf5]"
+        className="fixed bottom-6 left-6 z-[120] flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#D8BCA3] bg-white/95 text-[#D8BCA3] shadow-[0_0_0_4px_rgba(197,160,89,0.2),0_10px_36px_-6px_rgba(135,147,122,0.45)] backdrop-blur-md touch-manipulation transition-[transform,box-shadow] hover:scale-[1.05] hover:shadow-[0_0_0_5px_rgba(197,160,89,0.28),0_14px_44px_-6px_rgba(135,147,122,0.5)] active:scale-[0.96] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D8BCA3] focus-visible:ring-offset-2 focus-visible:ring-offset-[#fdfaf5]"
       >
         {musicAudible ? <Volume2 className="h-6 w-6" strokeWidth={2} /> : <VolumeX className="h-6 w-6" strokeWidth={2} />}
       </motion.button>
@@ -1589,7 +1610,7 @@ export default function WeddingInvitation() {
           background: #D8BCA333;
         }
         ::-webkit-scrollbar-thumb {
-          background: #B7410E66;
+          background: #D8BCA366;
           border-radius: 10px;
         }
       `,
@@ -1701,7 +1722,7 @@ function AdminPanel() {
 
         <button
           onClick={generateLink}
-          className="w-full bg-[#B7410E] text-white py-3 rounded-xl font-bold text-[10px] tracking-widest uppercase hover:bg-[#774C32] transition-all"
+          className="w-full bg-[#D8BCA3] text-white py-3 rounded-xl font-bold text-[10px] tracking-widest uppercase hover:bg-[#B69A82] transition-all"
         >
           Generate Personalized Link
         </button>

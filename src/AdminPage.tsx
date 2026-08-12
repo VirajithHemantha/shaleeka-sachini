@@ -51,7 +51,7 @@ With love,
   return (
     <div className="min-h-screen bg-[#fdfaf5] font-montserrat p-6 md:p-12">
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-[#d4af37]/30">
-        <div className="bg-[#B7410E] p-6 text-center">
+        <div className="bg-[#D8BCA3] p-6 text-center">
           <h1 className="font-cinzel text-2xl text-white">
             Link Generator
           </h1>
@@ -67,7 +67,7 @@ With love,
               <select
                 value={prefix}
                 onChange={(e) => setPrefix(e.target.value)}
-                className="w-full border border-slate-200 rounded-lg p-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#B7410E]/50"
+                className="w-full border border-slate-200 rounded-lg p-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#D8BCA3]/50"
               >
                 <option value="Mr.">Mr.</option>
                 <option value="Mrs.">Mrs.</option>
@@ -87,7 +87,7 @@ With love,
                 placeholder="e.g. Sanjaya"
                 value={guestName}
                 onChange={(e) => setGuestName(e.target.value)}
-                className="w-full border border-slate-200 rounded-lg p-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#B7410E]/50"
+                className="w-full border border-slate-200 rounded-lg p-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-[#D8BCA3]/50"
               />
             </div>
           </div>
@@ -110,14 +110,14 @@ With love,
                 <div className="flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={handleCopyLink}
-                    className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-white border border-[#B7410E] text-[#B7410E] rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-slate-50 transition-colors"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-white border border-[#D8BCA3] text-[#D8BCA3] rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-slate-50 transition-colors"
                   >
                     {copiedLink ? <Check size={16} /> : <LinkIcon size={16} />}
                     {copiedLink ? 'Copied!' : 'Copy Link Only'}
                   </button>
                   <button
                     onClick={handleCopyMessage}
-                    className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-[#B7410E] text-white rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-[#91330b] transition-colors shadow-md"
+                    className="flex-1 flex items-center justify-center gap-2 py-3 px-4 bg-[#D8BCA3] text-white rounded-lg font-bold uppercase tracking-widest text-xs hover:bg-[#B69A82] transition-colors shadow-md"
                   >
                     {copiedMessage ? <Check size={16} /> : <MessageSquare size={16} />}
                     {copiedMessage ? 'Copied!' : 'Copy Full Message'}
